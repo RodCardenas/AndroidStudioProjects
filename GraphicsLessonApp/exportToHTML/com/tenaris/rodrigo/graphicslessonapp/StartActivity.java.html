@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>StartActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+StartActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">com.tenaris.rodrigo.graphicslessonapp; 
+ 
+</span><span class="s0">import </span><span class="s1">android.app.Activity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.MotionEvent; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.FrameLayout; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageButton; 
+</span><span class="s0">import </span><span class="s1">android.widget.RelativeLayout; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">StartActivity </span><span class="s0">extends </span><span class="s1">Activity </span><span class="s0">implements </span><span class="s1">View.OnTouchListener 
+{ 
+    </span><span class="s0">public </span><span class="s1">GameEngineView theGameView; 
+    </span><span class="s0">public static boolean </span><span class="s1">DownPressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">RightPressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">LeftPressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">UpPressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">APressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">BPressed = </span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">public static boolean </span><span class="s1">NothingPressed = </span><span class="s0">false</span><span class="s1">; 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) 
+    { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.controller); 
+ 
+        theGameView = </span><span class="s0">new </span><span class="s1">GameEngineView(</span><span class="s0">this</span><span class="s1">); 
+        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.MasterFrame); 
+        frameLayout.addView(theGameView); 
+ 
+        RelativeLayout relativeLayoutControls = (RelativeLayout) findViewById(R.id.ControllerLayout); 
+        relativeLayoutControls.bringToFront(); 
+ 
+        ImageButton down = (ImageButton)findViewById(R.id.DownButton); 
+        down.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+ 
+        ImageButton right = (ImageButton)findViewById(R.id.RightButton); 
+        right.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+ 
+        ImageButton left = (ImageButton)findViewById(R.id.LeftButton); 
+        left.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+ 
+        ImageButton up = (ImageButton)findViewById(R.id.UpButton); 
+        up.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+ 
+        ImageButton a = (ImageButton)findViewById(R.id.AButton); 
+        a.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+ 
+        ImageButton b = (ImageButton)findViewById(R.id.BButton); 
+        b.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+    } 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isDownPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">DownPressed; 
+    } 
+ 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isRightPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">RightPressed; 
+    } 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isLeftPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">LeftPressed; 
+    } 
+ 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isUpPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">UpPressed; 
+    } 
+ 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isAPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">APressed; 
+    } 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isBPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">BPressed; 
+    } 
+ 
+    </span><span class="s0">public static boolean </span><span class="s1">isNothingPressed() 
+    { 
+        </span><span class="s0">return </span><span class="s1">NothingPressed; 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onTouch(View v, MotionEvent event) 
+    { 
+        </span><span class="s0">switch </span><span class="s1">(v.getId()) 
+        { 
+            </span><span class="s0">case </span><span class="s1">R.id.DownButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    DownPressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    DownPressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">case </span><span class="s1">R.id.RightButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    RightPressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    RightPressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">case </span><span class="s1">R.id.LeftButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    LeftPressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    LeftPressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">case </span><span class="s1">R.id.UpButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    UpPressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    UpPressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">case </span><span class="s1">R.id.AButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    APressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    APressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">case </span><span class="s1">R.id.BButton: 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_DOWN) 
+                { 
+                    BPressed = </span><span class="s0">true</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">false</span><span class="s1">; 
+                } 
+                </span><span class="s0">if</span><span class="s1">(event.getAction() == MotionEvent.ACTION_UP) 
+                { 
+                    BPressed = </span><span class="s0">false</span><span class="s1">; 
+                    NothingPressed =</span><span class="s0">true</span><span class="s1">; 
+                } 
+                </span><span class="s0">break</span><span class="s1">; 
+            </span><span class="s0">default</span><span class="s1">: 
+                </span><span class="s0">break</span><span class="s1">; 
+        } 
+        </span><span class="s0">return false</span><span class="s1">; 
+    } 
+} 
+</span></pre>
+</body>
+</html>

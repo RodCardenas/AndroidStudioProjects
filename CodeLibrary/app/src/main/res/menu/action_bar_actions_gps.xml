@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_invisible_image"
+        android:icon="@drawable/action_invisible_image"
+        android:title="@string/action_invisible_image"
+        android:showAsAction="ifRoom">
+    </item>
+
+    <item android:id="@+id/action_toggle_gps"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:title="@string/action_toggle_gps"
+        android:showAsAction="ifRoom">
+    </item>
+</menu>

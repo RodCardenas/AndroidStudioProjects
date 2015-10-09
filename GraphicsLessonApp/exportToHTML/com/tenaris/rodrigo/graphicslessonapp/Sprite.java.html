@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Sprite.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Sprite.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">com.tenaris.rodrigo.graphicslessonapp; 
+</span><span class="s0">import </span><span class="s1">java.util.Random; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Bitmap; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Canvas; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Rect; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+</span><span class="s2">/** 
+ * Created by Rodrigo on 1/7/2015. 
+ */</span><span class="s1"> 
+ 
+</span><span class="s0">public class </span><span class="s1">Sprite { 
+ 
+    </span><span class="s0">private static final int </span><span class="s1">BMP_ROWS = </span><span class="s3">4</span><span class="s1">; 
+    </span><span class="s0">private static final int </span><span class="s1">BMP_COLUMNS = </span><span class="s3">3</span><span class="s1">; 
+    </span><span class="s0">private int </span><span class="s1">x = </span><span class="s3">0</span><span class="s1">; 
+    </span><span class="s0">private int </span><span class="s1">y = </span><span class="s3">0</span><span class="s1">; 
+    </span><span class="s0">private int </span><span class="s1">xSpeed; 
+    </span><span class="s0">private int </span><span class="s1">ySpeed; 
+    </span><span class="s0">private int </span><span class="s1">direction; 
+    </span><span class="s0">private int </span><span class="s1">width; 
+    </span><span class="s0">private int </span><span class="s1">height; 
+    </span><span class="s0">private </span><span class="s1">GameEngineView gameView; 
+    </span><span class="s0">private </span><span class="s1">Bitmap bmp; 
+    </span><span class="s0">private int </span><span class="s1">currentFrame = </span><span class="s3">0</span><span class="s1">; 
+ 
+ 
+    </span><span class="s0">public </span><span class="s1">Sprite(GameEngineView GEView, Bitmap bmp) { 
+        </span><span class="s0">this</span><span class="s1">.width = bmp.getWidth() / BMP_COLUMNS; 
+        </span><span class="s0">this</span><span class="s1">.height = bmp.getHeight() / BMP_ROWS; 
+        </span><span class="s0">this</span><span class="s1">.gameView = GEView; 
+        </span><span class="s0">this</span><span class="s1">.bmp = bmp; 
+        </span><span class="s0">this</span><span class="s1">.xSpeed = </span><span class="s3">0</span><span class="s1">; 
+        </span><span class="s0">this</span><span class="s1">.ySpeed = </span><span class="s3">0</span><span class="s1">; 
+        </span><span class="s0">this</span><span class="s1">.direction = </span><span class="s3">0</span><span class="s1">; 
+    } 
+ 
+    </span><span class="s0">private void </span><span class="s1">update() 
+    { 
+    </span><span class="s2">//Update the Direction based on user input</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isDownPressed()) 
+        { 
+            y += </span><span class="s3">5</span><span class="s1">; 
+            direction = </span><span class="s3">0</span><span class="s1">; 
+        } 
+ 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isRightPressed()) 
+        { 
+            x += </span><span class="s3">5</span><span class="s1">; 
+            direction = </span><span class="s3">2</span><span class="s1">; 
+        } 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isLeftPressed()) 
+        { 
+            x -= </span><span class="s3">5</span><span class="s1">; 
+            direction = </span><span class="s3">1</span><span class="s1">; 
+        } 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isUpPressed()) 
+        { 
+            y -= </span><span class="s3">5</span><span class="s1">; 
+            direction = </span><span class="s3">3</span><span class="s1">; 
+        } 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isAPressed())     Toast.makeText(gameView.getContext(),</span><span class="s4">&quot;A&quot;</span><span class="s1">,Toast.LENGTH_SHORT).show(); 
+        </span><span class="s0">if </span><span class="s1">(StartActivity.isBPressed())     Toast.makeText(</span><span class="s0">this</span><span class="s1">.gameView.getContext(),</span><span class="s4">&quot;B&quot;</span><span class="s1">,Toast.LENGTH_SHORT).show(); 
+    </span><span class="s2">//Prevent Character from leaving screen</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(x &gt;= gameView.getWidth() - width) x = gameView.getWidth() - width; 
+        </span><span class="s0">if </span><span class="s1">(x &lt;= </span><span class="s3">0</span><span class="s1">) x = </span><span class="s3">0</span><span class="s1">; 
+        </span><span class="s0">if </span><span class="s1">(y &gt;= gameView.getHeight() - height) y = gameView.getHeight() - height; 
+        </span><span class="s0">if </span><span class="s1">(y &lt;= </span><span class="s3">0</span><span class="s1">) y = </span><span class="s3">0</span><span class="s1">; 
+    </span><span class="s2">//Keep Sprite without moving if D-Pad hasn't been activated</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(!StartActivity.NothingPressed) currentFrame = (currentFrame + </span><span class="s3">1</span><span class="s1">) % BMP_COLUMNS; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">onDraw(Canvas canvas) 
+    { 
+        update(); 
+        </span><span class="s0">int </span><span class="s1">srcX = currentFrame * width; 
+        </span><span class="s0">int </span><span class="s1">srcY = direction * height; 
+        Rect src = </span><span class="s0">new </span><span class="s1">Rect(srcX, srcY, srcX + width, srcY + height); 
+        Rect dst = </span><span class="s0">new </span><span class="s1">Rect(x, y, x + width, y + height); 
+        canvas.drawBitmap(bmp, src, dst, </span><span class="s0">null</span><span class="s1">); 
+    } 
+ 
+    </span><span class="s0">public boolean </span><span class="s1">isCollision(</span><span class="s0">float </span><span class="s1">x2, </span><span class="s0">float </span><span class="s1">y2) 
+    { 
+        </span><span class="s0">return </span><span class="s1">x2 &gt; x &amp;&amp; x2 &lt; x + width &amp;&amp; y2 &gt; y &amp;&amp; y2 &lt; y + height; 
+    } 
+} 
+ 
+</span></pre>
+</body>
+</html>

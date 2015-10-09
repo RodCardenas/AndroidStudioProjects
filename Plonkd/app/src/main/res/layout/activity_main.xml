@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/primary_text_dark"
+        android:text="@string/currentLocationTittle"
+        android:id="@+id/mainActivityTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/dark_header"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_tv"
+        android:text="@string/location"
+        android:textColor="@android:color/primary_text_dark"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_below="@id/mainActivityTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:layout_below="@+id/location_tv"
+        android:id="@+id/newLocButtonsLineLay"
+        android:layout_marginTop="10dp">
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/getLocationButtonText"
+            android:id="@+id/getLocation_b"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            style="@android:style/Widget.Holo.Button" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/saveLocationButtonText"
+            android:id="@+id/saveLocation_b"
+            android:layout_toRightOf="@id/getLocation_b"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            style="@android:style/Widget.Holo.Button" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/primary_text_dark"
+        android:text="@string/savedLocationsTitle"
+        android:id="@+id/savedLocationsTitle"
+        android:layout_below="@id/newLocButtonsLineLay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/dark_header"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savedLocations_lv"
+        android:layout_below="@id/savedLocationsTitle"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

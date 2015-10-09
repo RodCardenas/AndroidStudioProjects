@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>GameLoopThread.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+GameLoopThread.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">com.tenaris.rodrigo.graphicslessonapp; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Canvas; 
+ 
+</span><span class="s2">/** 
+ * Created by Rodrigo on 1/7/2015. 
+ * Updates logic in the game. 
+ */</span><span class="s1"> 
+ 
+</span><span class="s0">public class </span><span class="s1">GameLoopThread </span><span class="s0">extends </span><span class="s1">Thread 
+{ 
+    </span><span class="s0">static final long </span><span class="s1">FPS = </span><span class="s3">30</span><span class="s1">; 
+    </span><span class="s0">private </span><span class="s1">GameEngineView view; 
+    </span><span class="s0">private boolean </span><span class="s1">GameLoopIsRunning = </span><span class="s0">false</span><span class="s1">; 
+ 
+    </span><span class="s0">public </span><span class="s1">GameLoopThread(GameEngineView GEView) 
+    { 
+        </span><span class="s0">this</span><span class="s1">.view = GEView; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setGameLoopIsRunning(</span><span class="s0">boolean </span><span class="s1">IsLoopRunning) 
+    { 
+        GameLoopIsRunning = IsLoopRunning; 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">run() 
+    { 
+        </span><span class="s0">long </span><span class="s1">ticksPS = </span><span class="s3">1000 </span><span class="s1">/ FPS; 
+        </span><span class="s0">long </span><span class="s1">StartTime, SleepTime; 
+        </span><span class="s0">while </span><span class="s1">(GameLoopIsRunning) 
+        { 
+            Canvas c = </span><span class="s0">null</span><span class="s1">; 
+            StartTime = System.currentTimeMillis(); 
+            </span><span class="s0">try</span><span class="s1"> 
+            { 
+                c = view.getHolder().lockCanvas(); 
+                </span><span class="s0">synchronized </span><span class="s1">(view.getHolder()) 
+                { 
+                    view.onDraw(c); 
+                } 
+            } </span><span class="s0">finally</span><span class="s1"> 
+            { 
+                </span><span class="s0">if </span><span class="s1">(c != </span><span class="s0">null</span><span class="s1">) 
+                { 
+                    view.getHolder().unlockCanvasAndPost(c); 
+                } 
+            } 
+            SleepTime = ticksPS - (System.currentTimeMillis() - StartTime); 
+            </span><span class="s0">try</span><span class="s1"> 
+            { 
+                </span><span class="s0">if </span><span class="s1">(SleepTime &gt; </span><span class="s3">0</span><span class="s1">) 
+                    sleep(SleepTime); 
+                </span><span class="s0">else</span><span class="s1"> 
+                    sleep(</span><span class="s3">10</span><span class="s1">); 
+            } </span><span class="s0">catch </span><span class="s1">(Exception e) 
+            { 
+            } 
+        } 
+    } 
+}</span></pre>
+</body>
+</html>

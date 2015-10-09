@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    android:id="@+id/RelLayMainMenu"
+    tools:context="com.tenaris.rodrigo.tenarisbarcodelocator.MainMenuActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tenaris_barcode"
+        android:id="@+id/MainMenuLogo"
+        android:paddingBottom="100dp"
+        android:paddingTop="50dp" >
+    </ImageView>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/exit_app_btn"
+        android:text="About"
+        android:onClick="About"
+        android:layout_marginBottom="30dp">
+    </Button>
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/exit_app_btn"
+        android:id="@+id/historical_scans_btn"
+        android:text="Historical Scans"
+        android:onClick="GoToHistoricalScans"
+        android:layout_marginBottom="10dp">
+    </Button>
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/historical_scans_btn"
+        android:id="@+id/scan_code_btn"
+        android:text="Scan Code"
+        android:onClick="GoToScanActivity"
+        android:layout_marginBottom="10dp">
+    </Button>
+
+</RelativeLayout>

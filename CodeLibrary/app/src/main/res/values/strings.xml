@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Code Library</string>
+
+
+    //Activity Names
+    <string name="title_activity_save_data_internal">Save Data Internally In File Activity</string>
+    <string name="title_activity_save_data_database">Save Data In Internal Database Activity</string>
+    <string name="title_activity_data_management">Data Management Examples Activity</string>
+
+
+    <string name="enterWeightMessage">Please enter current weight to be stored:</string>
+    <string name="list">The List</string>
+
+    <string name="gpsInstructions">Press \'Get Location\' button to get your current coordinates:</string>
+
+
+    //Menu Actions
+    <string name="action_go_home">Go Home</string>
+    <string name="action_invisible_image">Toggle Image Invisibility</string>
+    <string name="action_toggle_gps">Toggle GPS Sensor State</string>
+    <string name="title_activity_gps">GPS Example</string>
+
+</resources>

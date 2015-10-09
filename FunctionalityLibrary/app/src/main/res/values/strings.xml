@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FunctionalityLibrary</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="currentLocationTittle">Current Location</string>
+    <string name="location">Wait for it...</string>
+    <string name="saveLocationButtonText">Save Location</string>
+    <string name="getLocationButtonText">Get Location</string>
+    <string name="savedLocationsTitle">Saved Locations</string>
+</resources>

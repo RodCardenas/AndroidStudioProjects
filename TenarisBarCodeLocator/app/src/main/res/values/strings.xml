@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tenaris Bar Code Reader</string>
+    <string name="app_shortcut_name">Tenaris Reader</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_tenaris_logo">Splash Screen</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="title_activity_main_menu">Main Menu Activity</string>
+    <string name="title_activity_test_database">Scans Database</string>
+
+</resources>

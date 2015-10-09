@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>GameEngineView.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+GameEngineView.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">com.tenaris.rodrigo.graphicslessonapp; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Context; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Bitmap; 
+</span><span class="s0">import </span><span class="s1">android.graphics.BitmapFactory; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Canvas; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Color; 
+</span><span class="s0">import </span><span class="s1">android.view.SurfaceHolder; 
+</span><span class="s0">import </span><span class="s1">android.view.SurfaceView; 
+ 
+ 
+</span><span class="s2">/** 
+ * Created by Rodrigo on 1/4/2015. 
+ * Updates view/graphics in the game. 
+ */</span><span class="s1"> 
+</span><span class="s0">public class </span><span class="s1">GameEngineView </span><span class="s0">extends </span><span class="s1">SurfaceView { 
+    </span><span class="s0">private </span><span class="s1">Bitmap bmp; 
+    </span><span class="s0">private </span><span class="s1">SurfaceHolder holder; 
+    </span><span class="s0">private </span><span class="s1">GameLoopThread gameLoopThread; 
+    </span><span class="s0">private int </span><span class="s1">x = </span><span class="s3">0</span><span class="s1">; 
+    </span><span class="s0">private int </span><span class="s1">xSpeed = </span><span class="s3">1</span><span class="s1">; 
+    </span><span class="s0">private </span><span class="s1">Sprite sprite; 
+ 
+    </span><span class="s0">public </span><span class="s1">GameEngineView(Context context) 
+    { 
+        </span><span class="s0">super</span><span class="s1">(context); 
+        gameLoopThread = </span><span class="s0">new </span><span class="s1">GameLoopThread(</span><span class="s0">this</span><span class="s1">); 
+        holder = getHolder(); 
+        holder.addCallback(</span><span class="s0">new </span><span class="s1">SurfaceHolder.Callback() 
+        { 
+ 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">surfaceDestroyed(SurfaceHolder holder) 
+            { 
+                </span><span class="s0">boolean </span><span class="s1">retry = </span><span class="s0">true</span><span class="s1">; 
+                gameLoopThread.setGameLoopIsRunning(</span><span class="s0">false</span><span class="s1">); 
+                </span><span class="s0">while </span><span class="s1">(retry) 
+                { 
+                    </span><span class="s0">try</span><span class="s1"> 
+                    { 
+                        gameLoopThread.join(); 
+                        retry = </span><span class="s0">false</span><span class="s1">; 
+                    } </span><span class="s0">catch </span><span class="s1">(InterruptedException e) 
+                    { 
+                    } 
+                } 
+            } 
+ 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">surfaceCreated(SurfaceHolder holder) 
+            { 
+                gameLoopThread.setGameLoopIsRunning(</span><span class="s0">true</span><span class="s1">); 
+                gameLoopThread.start(); 
+            } 
+ 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">surfaceChanged(SurfaceHolder holder, </span><span class="s0">int </span><span class="s1">format, 
+                                       </span><span class="s0">int </span><span class="s1">width, </span><span class="s0">int </span><span class="s1">height) 
+            { 
+            } 
+        }); 
+        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.char_hero); 
+        sprite = </span><span class="s0">new </span><span class="s1">Sprite(</span><span class="s0">this</span><span class="s1">,bmp); 
+    } 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onDraw(Canvas canvas) 
+    { 
+        canvas.drawColor(Color.LTGRAY); 
+        sprite.onDraw(canvas); 
+    } 
+ 
+ 
+}</span></pre>
+</body>
+</html>
