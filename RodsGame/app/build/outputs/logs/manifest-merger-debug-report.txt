@@ -1,0 +1,109 @@
+-- Merging decision tree log ---
+manifest
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:2:1-82:12
+	xmlns:android
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:5:5-30
+	android:versionCode
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+		INJECTED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml
+application
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:11:5-80:19
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:15:9-50
+activity#com.rod.rodsgame.CharacterListActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:16:9-22:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:18:13-57
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:17:13-66
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:19:13-21:58
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:20:17-63
+	android:value
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:21:17-55
+activity#com.rod.rodsgame.CharacterDetailActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:23:9-30:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:25:13-59
+	android:parentActivityName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:26:13-64
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:24:13-68
+activity#com.rod.rodsgame.AddCharacterActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:31:9-38:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:33:13-72
+	android:parentActivityName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:34:13-80
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:32:13-65
+activity#menus.DashboardActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:39:9-45:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:41:13-61
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:40:13-51
+activity#menus.SplashActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:46:9-54:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:48:13-58
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:47:13-48
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:49:13-53:29
+action#android.intent.action.MAIN
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:50:17-69
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:50:25-66
+category#android.intent.category.LAUNCHER
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:52:17-77
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:52:27-74
+activity#menus.SettingsActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:55:9-62:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:57:13-60
+	android:parentActivityName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:58:13-65
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:56:13-50
+activity#menus.MainMenuActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:63:9-70:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:65:13-61
+	android:parentActivityName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:66:13-65
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:64:13-50
+activity#maps.TiledMapsActivity
+ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:72:9-79:20
+	android:label
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:74:13-33
+	android:parentActivityName
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:75:13-64
+	android:name
+		ADDED from R:\AndroidStudioProjects\RodsGame\app\src\main\AndroidManifest.xml:73:13-50

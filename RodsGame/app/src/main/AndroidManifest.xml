@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rod.rodsgame"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="com.rod.rodsgame.CharacterListActivity"
+            android:label="@string/title_character_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.rod.rodsgame.CharacterDetailActivity"
+            android:label="@string/title_character_detail"
+            android:parentActivityName=".CharacterListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CharacterListActivity" />
+        </activity>
+        <activity
+            android:name="com.rod.rodsgame.AddCharacterActivity"
+            android:label="@string/title_activity_add_character_screen"
+            android:parentActivityName="com.rod.rodsgame.CharacterListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rod.rodsgame.CharacterListActivity" />
+        </activity>
+        <activity
+            android:name="menus.DashboardActivity"
+            android:label="@string/title_activity_dashboard" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.SplashActivity" />
+        </activity>
+        <activity
+            android:name="menus.SplashActivity"
+            android:label="@string/title_activity_splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="menus.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="menus.DashboardActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menus.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="menus.MainMenuActivity"
+            android:label="@string/title_activity_main_menu"
+            android:parentActivityName="menus.DashboardActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menus.DashboardActivity" />
+        </activity>
+        
+        <activity
+            android:name="maps.TiledMapsActivity"
+            android:label="Maps"
+            android:parentActivityName="menus.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menus.MainMenuActivity" />
+        </activity>
+    </application>
+
+</manifest>

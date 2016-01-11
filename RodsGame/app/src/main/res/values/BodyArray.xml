@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bodys">
+        <item>@drawable/body_white</item>
+        <item>@drawable/body_blue</item>
+        <item>@drawable/body_green</item>
+        <item>@drawable/body_grey</item>
+        <item>@drawable/body_red</item>      
+        <item>@drawable/body_yellow</item>
+    </string-array>
+    
+</resources>

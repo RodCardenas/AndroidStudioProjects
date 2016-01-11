@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RodsGame</string>
+    <string name="title_character_detail">Character Detail</string>
+    <string name="title_character_list">Characters</string>
+    <string name="title_activity_add_character_screen">Create a new character</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_list_view">Characters</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="AddCharacterNameHint">Type in name of new character</string>
+    <string name="AddCharacterButton">Create Character</string>
+    <string name="charName">a</string>
+    <string name="charLevel">b</string>
+    <string name="charHP">c</string>
+    <string name="charStr">d</string>
+    <string name="charDef">e</string>
+    <string name="charClass">f</string>
+    <string name="NewCharacterTitle">New Character</string>
+    <string name="hairColor">Black</string>
+    <string name="bodyColor">Black</string>
+    <string name="rHandColor">Black</string>
+    <string name="lHandColor">Black</string>
+    <string name="feetColor">Black</string>
+
+    <color name="white">#FFFFFF</color>
+
+    <string name="title_activity_list">ListActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    
+    <string name="PlayableDesc">The look of the player.</string>
+    <string name="Character_list_button">Character List</string>
+    <string name="Maps_Button">Maps</string>
+    <string name="Character_list_button_desc">Button that takes you to the Character List.</string>
+    <string name="Maps_Button_desc">Button that takes you to the map selection.</string>
+
+</resources>

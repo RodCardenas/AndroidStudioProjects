@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddCharacterActivity" >
+
+    <EditText
+        android:id="@+id/CharacterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/AddCharacterNameHint"
+        android:inputType="textPersonName"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/CharacterClassSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CharacterName"
+        android:layout_alignRight="@+id/CharacterName"
+        android:layout_below="@+id/CharacterName"
+        android:layout_marginTop="24dp"
+        tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+    <Button
+        android:id="@+id/CharacterCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="@string/AddCharacterButton" />
+
+    <ImageButton
+        android:id="@+id/createHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CharacterClassSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:clickable="true"
+        android:src="@drawable/white_black_hair" 
+        android:contentDescription="Choose Hair and head color."/>
+    
+    <ImageButton
+        android:id="@+id/createBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createHead"
+        android:layout_below="@+id/createHead"
+        android:clickable="true"
+        android:src="@drawable/body_white" 
+        android:contentDescription="Choose body color."/>
+
+    <ImageButton
+        android:id="@+id/createFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createBody"
+        android:layout_below="@+id/createBody"
+        android:clickable="true"
+        android:src="@drawable/feet_white" 
+        android:contentDescription="Choose feet color."/>
+
+    <ImageView
+        android:id="@+id/createRHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/createBody"
+        android:layout_toRightOf="@+id/createBody"
+        android:src="@drawable/hand_white"
+        android:contentDescription="Right hand color dependent on body color." />
+
+    <ImageView
+        android:id="@+id/createLHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/createBody"
+        android:layout_toLeftOf="@+id/createBody"
+        android:src="@drawable/hand_white" 
+        android:contentDescription="Right hand color dependent on body color."/>
+
+</RelativeLayout>

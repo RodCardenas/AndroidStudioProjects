@@ -1,0 +1,229 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#b06f5155"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout"
+            android:gravity="fill_horizontal"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <TextView android:id="@+id/weightTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Weight"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_column="0"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/pushupsTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pushups"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/weightET"
+                    android:layout_toEndOf="@+id/weightET"
+                    android:layout_column="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/situpsTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Situps"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/pushupET"
+                    android:layout_column="2"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/squatsTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Squats"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/situpsET"
+                    android:layout_toEndOf="@+id/situpsET"
+                    android:layout_column="3"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/distanceTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_column="4"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <EditText android:id="@+id/weightET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10" android:lines="5"
+                    android:minLines="3" android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@+id/weightTV"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignRight="@+id/weightTV"
+                    android:layout_alignEnd="@+id/weightTV"
+                    android:layout_column="0"
+                    android:nextFocusDown="@+id/pushupET"
+                    android:layout_weight="1"
+                    android:hint="0.0">
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/pushupET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:layout_alignBottom="@+id/weightET"
+                    android:layout_toRightOf="@+id/weightET"
+                    android:layout_alignRight="@+id/pushupsTV"
+                    android:layout_alignEnd="@+id/pushupsTV"
+                    android:layout_column="1"
+                    android:nextFocusDown="@+id/situpsET"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+                <EditText
+                    android:id="@+id/situpsET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/situpsTV"
+                    android:layout_toRightOf="@+id/pushupET"
+                    android:layout_alignRight="@+id/situpsTV"
+                    android:layout_alignEnd="@+id/situpsTV"
+                    android:inputType="number"
+                    android:layout_column="2"
+                    android:nextFocusDown="@+id/squatsET"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+                <EditText
+                    android:id="@+id/squatsET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/squatsTV"
+                    android:layout_toRightOf="@+id/situpsET"
+                    android:layout_alignRight="@+id/squatsTV"
+                    android:layout_alignEnd="@+id/squatsTV"
+                    android:inputType="number"
+                    android:layout_column="3"
+                    android:nextFocusDown="@+id/distanceET"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+                <EditText
+                    android:id="@+id/distanceET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@+id/distanceTV"
+                    android:layout_alignLeft="@+id/distanceTV"
+                    android:layout_alignStart="@+id/distanceTV"
+                    android:layout_column="4"
+                    android:layout_weight="1"
+                    android:hint="0.0" />
+            </TableRow>
+
+        </TableLayout>
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_weight="1"
+            android:layout_below="@+id/tableLayout"
+            android:layout_centerHorizontal="true"
+            android:datePickerMode="calendar"
+            android:scaleX="0.95"
+            android:scaleY="0.95"
+            android:nestedScrollingEnabled="true"
+            android:spinnersShown="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Add New"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+
+        <ImageView  android:id="@+id/logoImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" />
+
+        <Button android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Delete First"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="list"
+        android:background="#50d099b2"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="hands">
+        <item>@drawable/hand_white</item>
+        <item>@drawable/hand_blue</item>
+        <item>@drawable/hand_green</item>
+        <item>@drawable/hand_grey</item>
+        <item>@drawable/hand_red</item>
+        <item>@drawable/hand_yellow</item>
+    </string-array>
+    
+</resources>

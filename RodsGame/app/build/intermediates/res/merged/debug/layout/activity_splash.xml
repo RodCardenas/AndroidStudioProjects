@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <ViewAnimator
+        android:id="@+id/vAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        />
+
+    <ImageView
+        android:id="@+id/rodIcon"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher" />
+
+</LinearLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_splash.xml -->

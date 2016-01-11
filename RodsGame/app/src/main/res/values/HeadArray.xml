@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="heads">
+        <item>@drawable/grey_black_hair</item>
+        <item>@drawable/grey_blonde_hair</item>
+        <item>@drawable/grey_red_hair</item>
+        
+        <item>@drawable/green_black_hair</item>
+        <item>@drawable/green_blonde_hair</item>
+        <item>@drawable/green_red_hair</item>
+        
+        <item>@drawable/blue_black_hair</item>
+        <item>@drawable/blue_blonde_hair</item>
+        <item>@drawable/blue_red_hair</item>
+        
+        <item>@drawable/red_black_hair</item>
+        <item>@drawable/red_blonde_hair</item>
+        <item>@drawable/red_red_hair</item>
+        
+        <item>@drawable/white_black_hair</item>
+        <item>@drawable/white_blonde_hair</item>
+        <item>@drawable/white_red_hair</item>
+        
+        <item>@drawable/yellow_black_hair</item>
+        <item>@drawable/yellow_red_hair</item>        
+        
+        
+    </string-array>
+    
+</resources>

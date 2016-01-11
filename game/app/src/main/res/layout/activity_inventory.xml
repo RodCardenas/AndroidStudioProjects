@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#806565">
+
+    <GridLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@android:color/darker_gray"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:id="@+id/gridLayout">
+
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton0"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton1"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton2"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton3"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton5"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton6"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:src="@android:drawable/checkbox_off_background" />
+        <ImageButton
+            android:background="#806565"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/inventoryButton7"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:src="@android:drawable/checkbox_off_background" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Inventory"
+        android:id="@+id/InventoryTextView"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignLeft="@+id/gridLayout"
+        android:layout_alignStart="@+id/gridLayout"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignRight="@+id/gridLayout"
+        android:layout_alignEnd="@+id/gridLayout" />
+
+</RelativeLayout>

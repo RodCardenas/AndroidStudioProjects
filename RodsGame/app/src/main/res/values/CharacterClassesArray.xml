@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="CharacterClassesArray">
+        <item>Mage</item>
+        <item>Warrior</item>
+        <item>Thief</item>
+        <item>Noob</item>
+    </string-array>
+</resources>

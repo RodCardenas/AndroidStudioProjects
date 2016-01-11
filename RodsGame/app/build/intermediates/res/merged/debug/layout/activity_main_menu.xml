@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainMenuActivity" >
+    
+    <Button
+        android:id="@+id/charactersB"
+        style="@style/ButtonFontStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/Character_list_button_desc" 
+        android:text="@string/Character_list_button"/>
+
+    <Button
+        android:id="@+id/mapsB"
+        style="@style/ButtonFontStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/charactersB"
+        android:layout_alignLeft="@+id/charactersB"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/Maps_Button_desc"
+        android:text="@string/Maps_Button" />
+
+    <TextView
+        android:id="@+id/ActPlayerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp" 
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/ActPlayerLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ActPlayerName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" 
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/ActPlayerPlayable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ActPlayerLevel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/blue_black_hair" 
+        android:contentDescription="@string/PlayableDesc"/>
+
+    <Button
+        android:id="@+id/toolB"
+        style="@style/ButtonFontStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mapsB"
+        android:layout_alignLeft="@+id/ActPlayerLevel"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Tools_Button_desc"
+        android:text="Tools Button" />
+
+</RelativeLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_main_menu.xml -->
