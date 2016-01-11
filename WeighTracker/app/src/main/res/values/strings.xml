@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">CodeTreasureChest</string>
-
-    <string name="enterWeightMessage">Please enter current weight to be stored:</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_save_data">SaveDataActivity</string>
-    <string name="list">The List</string>
-</resources>
