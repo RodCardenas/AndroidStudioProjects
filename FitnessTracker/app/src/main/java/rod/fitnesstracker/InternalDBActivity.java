@@ -17,6 +17,8 @@ public class InternalDBActivity extends ListActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //TODO: Split layout into a data entry screen and a display data screen. Have two separate activities.
+        //TODO: Add data trending functionality (display rolling 10 day weight average, etc.)
         setContentView(R.layout.activity_internal_db);
 
         datasource = new DataManager(this);
@@ -41,7 +43,30 @@ public class InternalDBActivity extends ListActivity
 
         switch (view.getId())
         {
-            case R.id.add:
+            //TODO: Implement edit entry functionality.
+            case R.id.save:
+
+                if(currentWeight.getText().toString().matches(""))
+                {
+                    currentWeight.setText("0.0");
+                }
+                if(currentPushups.getText().toString().matches(""))
+                {
+                    currentPushups.setText("0");
+                }
+                if(currentSitups.getText().toString().matches(""))
+                {
+                    currentSitups.setText("0");
+                }
+                if(currentSquats.getText().toString().matches(""))
+                {
+                    currentSquats.setText("0");
+                }
+                if(currentDistance.getText().toString().matches(""))
+                {
+                    currentDistance.setText("0.0");
+                }
+
                 dta = datasource.createData(
                         createDate(currentDate),
                         Double.parseDouble(currentWeight.getText().toString()),
@@ -57,7 +82,7 @@ public class InternalDBActivity extends ListActivity
                 currentDistance.setText("");
                 break;
 
-            case R.id.delete:
+            case R.id.deleteFirst:
                 if (getListAdapter().getCount() > 0)
                 {
                     dta = (Data) getListAdapter().getItem(0);
@@ -65,8 +90,22 @@ public class InternalDBActivity extends ListActivity
                     adapter.remove(dta);
                 }
                 break;
+            case R.id.deleteLast:
+                int ct = getListAdapter().getCount();
+                if (ct > 0)
+                {
+                    dta = (Data) getListAdapter().getItem(ct - 1);
+                    datasource.deleteData(dta);
+                    adapter.remove(dta);
+                }
+                break;
         }
         adapter.notifyDataSetChanged();
+    }
+
+    private void checkEmptyEntries()
+    {
+
     }
 
     private long createDate(DatePicker dp)

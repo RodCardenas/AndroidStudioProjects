@@ -194,10 +194,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-        <Button android:id="@+id/add"
+        <Button android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="Add New"
+            android:text="Save"
             android:onClick="onClick"
             android:layout_weight="1"
             android:layout_marginTop="10dp" />
@@ -209,10 +209,18 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1" />
 
-        <Button android:id="@+id/delete"
+        <Button android:id="@+id/deleteFirst"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:text="Delete First"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+
+        <Button android:id="@+id/deleteLast"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Delete Last"
             android:onClick="onClick"
             android:layout_weight="1"
             android:layout_marginTop="10dp" />
