@@ -1,15 +1,17 @@
 package rod.fitnesstracker;
 
-import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.List;
-
-public class InternalDBActivity extends ListActivity
+public class InternalDBActivity extends AppCompatActivity
 {
     private DataManager datasource;
 
@@ -17,22 +19,21 @@ public class InternalDBActivity extends ListActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        //TODO: Split layout into a data entry screen and a display data screen. Have two separate activities.
         //TODO: Add data trending functionality (display rolling 10 day weight average, etc.)
         setContentView(R.layout.activity_internal_db);
 
+        //Setup toolbar/actionbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setLogo(R.mipmap.ic_launcher);
+
         datasource = new DataManager(this);
         datasource.open();
-
-        List<Data> values = datasource.getAllData();
-        ArrayAdapter<Data> adapter = new ArrayAdapter<Data>(this, android.R.layout.simple_list_item_1, values);
-        setListAdapter(adapter);
     }
 
     public void onClick(View view)
     {
         @SuppressWarnings("unchecked")
-        ArrayAdapter<Data> adapter = (ArrayAdapter<Data>) getListAdapter();
         EditText currentWeight = (EditText) findViewById(R.id.weightET);
         EditText currentPushups = (EditText) findViewById(R.id.pushupET);
         EditText currentSitups = (EditText) findViewById(R.id.situpsET);
@@ -74,38 +75,16 @@ public class InternalDBActivity extends ListActivity
                         Integer.parseInt(currentSitups.getText().toString()),
                         Integer.parseInt(currentSquats.getText().toString()),
                         Double.parseDouble(currentDistance.getText().toString()));
-                adapter.add(dta);
                 currentWeight.setText("");
                 currentPushups.setText("");
                 currentSitups.setText("");
                 currentSquats.setText("");
                 currentDistance.setText("");
-                break;
 
-            case R.id.deleteFirst:
-                if (getListAdapter().getCount() > 0)
-                {
-                    dta = (Data) getListAdapter().getItem(0);
-                    datasource.deleteData(dta);
-                    adapter.remove(dta);
-                }
-                break;
-            case R.id.deleteLast:
-                int ct = getListAdapter().getCount();
-                if (ct > 0)
-                {
-                    dta = (Data) getListAdapter().getItem(ct - 1);
-                    datasource.deleteData(dta);
-                    adapter.remove(dta);
-                }
+                Toast.makeText(this, "Data Saved!", Toast.LENGTH_SHORT).show();
+
                 break;
         }
-        adapter.notifyDataSetChanged();
-    }
-
-    private void checkEmptyEntries()
-    {
-
     }
 
     private long createDate(DatePicker dp)
@@ -140,5 +119,27 @@ public class InternalDBActivity extends ListActivity
     {
         datasource.close();
         super.onPause();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        // Handle presses on the action bar items
+        switch (item.getItemId())
+        {
+            case R.id.action_view_list:
+                Intent myIntent = new Intent(InternalDBActivity.this, ViewDataActivity.class);
+                startActivity(myIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.internal_db_activity_menu, menu);
+        return true;
     }
 }

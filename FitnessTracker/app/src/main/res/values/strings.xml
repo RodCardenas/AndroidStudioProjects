@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FitnessTracker</string>
+    <string name="action_add_data">Add Data</string>
+    <string name="action_view_list">View List</string>
 </resources>

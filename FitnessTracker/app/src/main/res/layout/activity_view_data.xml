@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="rod.fitnesstracker.ViewDataActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="@color/colorPrimary"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/toolbar"
+        android:text="list"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/deleteFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Delete First"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/deleteLast"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Delete Last"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>
