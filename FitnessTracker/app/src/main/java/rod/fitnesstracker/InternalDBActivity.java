@@ -44,7 +44,6 @@ public class InternalDBActivity extends AppCompatActivity
 
         switch (view.getId())
         {
-            //TODO: Implement edit entry functionality.
             case R.id.save:
 
                 if(currentWeight.getText().toString().matches(""))

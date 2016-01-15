@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,17 +34,17 @@ public class ViewDataActivity extends AppCompatActivity
         List<Data> values = datasource.getAllData();
         ArrayAdapter<Data> adapter = new ArrayAdapter<Data>(this, android.R.layout.simple_list_item_1, values);
         list.setAdapter(adapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        registerForContextMenu(list);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
-                Data dta = (Data)parent.getAdapter().getItem(position);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Data dta = (Data) parent.getAdapter().getItem(position);
                 Intent myIntent = new Intent(ViewDataActivity.this, TestActivity.class);
                 myIntent.putExtra("data", dta.toString());
                 startActivity(myIntent);
             }
         });
+
 
         //Setup toolbar/actionbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -58,13 +60,14 @@ public class ViewDataActivity extends AppCompatActivity
         ListView list = (ListView) findViewById(R.id.list);
         ArrayAdapter<Data> adapter = (ArrayAdapter<Data>) list.getAdapter();
         Data dta = null;
+        int ct = adapter.getCount();
 
         switch (view.getId())
         {
             //TODO: Implement edit entry functionality.
 
             case R.id.deleteFirst:
-                if (adapter.getCount() > 0)
+                if (ct > 0)
                 {
                     dta = (Data) adapter.getItem(0);
                     datasource.deleteData(dta);
@@ -74,7 +77,6 @@ public class ViewDataActivity extends AppCompatActivity
 
                 break;
             case R.id.deleteLast:
-                int ct = adapter.getCount();
                 if (ct > 0)
                 {
                     dta = (Data) adapter.getItem(ct - 1);
@@ -121,5 +123,60 @@ public class ViewDataActivity extends AppCompatActivity
     {
         getMenuInflater().inflate(R.menu.view_data_activity_menu, menu);
         return true;
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
+    {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        if (v.getId()==R.id.list)
+        {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.view_data_context_menu, menu);
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item)
+    {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        ListView list = (ListView) findViewById(R.id.list);
+        ArrayAdapter<Data> adapter = (ArrayAdapter<Data>) list.getAdapter();
+        Data dta = null;
+        int ct = adapter.getCount();
+
+        switch(item.getItemId())
+        {
+
+            case R.id.action_add_data:
+                //TODO Implement add at current position (bundle position)
+                startActivity(new Intent(ViewDataActivity.this, InternalDBActivity.class));
+                return true;
+
+            case R.id.action_delete_data:
+                if (ct > 0)
+                {
+                    dta = (Data) adapter.getItem(info.position);
+                    datasource.deleteData(dta);
+                    adapter.remove(dta);
+                    Toast.makeText(this, "Item deleted!", Toast.LENGTH_SHORT).show();
+                }else Toast.makeText(this, "No item to delete!", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_edit_data:
+                //TODO: Implement edit entry functionality.
+                Toast.makeText(this, "Edit item work in progress", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_view_data:
+                dta = (Data) adapter.getItem(info.position);
+                Intent myIntent = new Intent(ViewDataActivity.this, TestActivity.class);
+                myIntent.putExtra("data", dta.toString());
+                startActivity(myIntent);
+                return true;
+
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 }

@@ -2,4 +2,7 @@
     <string name="app_name">FitnessTracker</string>
     <string name="action_add_data">Add Data</string>
     <string name="action_view_list">View List</string>
+    <string name="action_delete_data">Delete</string>
+    <string name="action_edit_data">Edit</string>
+    <string name="action_view_data">View</string>
 </resources>
