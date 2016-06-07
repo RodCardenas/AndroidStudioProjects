@@ -20,4 +20,4 @@
         android:positiveButtonText="@null"
         android:title="@string/pref_title_add_friends_to_messages" />
 
-</PreferenceScreen><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/xml/pref_general.xml -->
+</PreferenceScreen>

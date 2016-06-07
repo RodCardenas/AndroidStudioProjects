@@ -22,4 +22,4 @@
         <intent android:action="android.settings.SYNC_SETTINGS" />
     </Preference>
 
-</PreferenceScreen><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/xml/pref_data_sync.xml -->
+</PreferenceScreen>

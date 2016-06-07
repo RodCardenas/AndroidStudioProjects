@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/xml/pref_data_sync.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/xml/pref_data_sync.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/xml/pref_general.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/xml/pref_general.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/xml/pref_headers.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/xml/pref_headers.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/xml/dummy.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/xml/dummy.xml"
+    }
+]

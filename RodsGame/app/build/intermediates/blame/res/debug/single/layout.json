@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/fragment_character_detail.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/fragment_character_detail.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_main_menu.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_main_menu.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_add_character_screen.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_add_character_screen.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_character_detail.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_character_detail.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_character_twopane.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_character_twopane.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_character_list.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_character_list.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_maps.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_maps.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/activity_dashboard.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_dashboard.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout/learning_action_bar.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout/learning_action_bar.xml"
+    }
+]

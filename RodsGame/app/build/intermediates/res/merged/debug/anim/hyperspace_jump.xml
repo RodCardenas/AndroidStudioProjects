@@ -29,4 +29,4 @@
             android:pivotY="50%"
             android:duration="500" />
     </set>
-</set><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/anim/hyperspace_jump.xml -->
+</set>

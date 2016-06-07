@@ -119,4 +119,4 @@
             android:layout_below="@+id/playerStr"
             android:text="Items" />
 
-</RelativeLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout-land/activity_maps.xml -->
+</RelativeLayout>

@@ -16,4 +16,4 @@
         android:layout_gravity="center"
         android:src="@drawable/ic_launcher" />
 
-</LinearLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_splash.xml -->
+</LinearLayout>

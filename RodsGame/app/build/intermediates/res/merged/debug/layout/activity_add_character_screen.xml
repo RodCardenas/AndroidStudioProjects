@@ -90,4 +90,4 @@
         android:src="@drawable/hand_white" 
         android:contentDescription="Right hand color dependent on body color."/>
 
-</RelativeLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_add_character_screen.xml -->
+</RelativeLayout>

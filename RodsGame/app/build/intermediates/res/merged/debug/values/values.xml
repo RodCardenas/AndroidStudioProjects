@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/CharacterClassesArray.xml -->
-    <eat-comment/>
     <string-array name="CharacterClassesArray">
         <item>Mage</item>
         <item>Warrior</item>
         <item>Thief</item>
         <item>Noob</item>
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/BodyArray.xml -->
-    <eat-comment/>
     <string-array name="bodys">
         <item>@drawable/body_white</item>
         <item>@drawable/body_blue</item>
@@ -18,8 +14,6 @@
         <item>@drawable/body_red</item>      
         <item>@drawable/body_yellow</item>
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/FeetArray.xml -->
-    <eat-comment/>
     <string-array name="feets">
         <item>@drawable/feet_white</item>
         <item>@drawable/feet_blue</item>
@@ -28,8 +22,6 @@
         <item>@drawable/feet_red</item>
         <item>@drawable/feet_yellow</item>
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/HandArray.xml -->
-    <eat-comment/>
     <string-array name="hands">
         <item>@drawable/hand_white</item>
         <item>@drawable/hand_blue</item>
@@ -38,8 +30,6 @@
         <item>@drawable/hand_red</item>
         <item>@drawable/hand_yellow</item>
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/HeadArray.xml -->
-    <eat-comment/>
     <string-array name="heads">
         <item>@drawable/grey_black_hair</item>
         <item>@drawable/grey_blonde_hair</item>
@@ -66,8 +56,6 @@
         
         
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings_activity_settings.xml -->
-    <eat-comment/>
     <string-array name="pref_example_list_titles">
         <item>Always</item>
         <item>When possible</item>
@@ -94,15 +82,9 @@
         <item>360</item>
         <item>-1</item>
     </string-array>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <color name="white">#FFFFFF</color>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/dimens.xml -->
-    <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="AddCharacterButton">Create Character</string>
     <string name="AddCharacterNameHint">Type in name of new character</string>
     <string name="Character_list_button">Character List</string>
@@ -113,12 +95,8 @@
     <string name="PlayableDesc">The look of the player.</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">RodsGame</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings_activity_settings.xml -->
-    <eat-comment/>
     <string name="audio_on">Audio On</string>
     <string name="audio_on_description">If Checked Audio will be on</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="bodyColor">Black</string>
     <string name="charClass">f</string>
     <string name="charDef">e</string>
@@ -130,15 +108,11 @@
     <string name="hairColor">Black</string>
     <string name="hello_world">Hello world!</string>
     <string name="lHandColor">Black</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings_activity_settings.xml -->
-    <eat-comment/>
     <string name="pref_header_data_sync">Data &amp; sync</string>
     <string name="pref_header_general">General</string>
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
     <string name="pref_title_sync_frequency">Sync frequency</string>
     <string name="pref_title_system_sync_settings">System sync settings</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="rHandColor">Black</string>
     <string name="title_activity_add_character_screen">Create a new character</string>
     <string name="title_activity_dashboard">DashboardActivity</string>
@@ -146,16 +120,10 @@
     <string name="title_activity_list_view">Characters</string>
     <string name="title_activity_main_menu">MainMenuActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings_activity_settings.xml -->
-    <eat-comment/>
     <string name="title_activity_settings">Settings</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/strings.xml -->
-    <eat-comment/>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_character_detail">Character Detail</string>
     <string name="title_character_list">Characters</string>
-    <!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/values/styles.xml -->
-    <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in

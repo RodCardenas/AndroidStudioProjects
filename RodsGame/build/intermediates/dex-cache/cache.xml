@@ -2,11 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Rodrigo\Documents\Android SDK\adt-bundle-windows-x86_64-20130917\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
-        jumboMode="false"
+        jar="/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="73dab02d8e6611598d818f5335fc71e6ddb18361">
+        <dex dex="/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_da74dc7af9cb92d673d992f55383d24272b5874d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/rod/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="true"
         revision="23.0.2"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="R:\AndroidStudioProjects\RodsGame\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-f433f0dc7ebe38d6496c59a781c20f8f8200796f.jar" />
+        <dex dex="/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_fb6d3d40abfeba6ac969285bb3ee37c085fa4350/classes.dex" />
+    </item>
+    <item
+        jar="/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4c230c5056fade365999bb4a2f2057bbc90df1bb">
+        <dex dex="/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_849ff26e2d91c6c214e6f077ecbf46681f858671/classes.dex" />
     </item>
 
 </items>

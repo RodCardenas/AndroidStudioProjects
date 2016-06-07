@@ -28,4 +28,4 @@
         android:contentDescription="Start Button"
         android:text="Start"/>
 
-</RelativeLayout><!-- From: file:/R:/AndroidStudioProjects/RodsGame/app/src/main/res/layout/activity_dashboard.xml -->
+</RelativeLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout-land/fragment_character_detail.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout-land/fragment_character_detail.xml"
+    },
+    {
+        "merged": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/build/intermediates/res/merged/debug/layout-land/activity_maps.xml",
+        "source": "/Users/rod/Documents/Code/AndroidStudioProjects/RodsGame/app/src/main/res/layout-land/activity_maps.xml"
+    }
+]
