@@ -14,6 +14,6 @@
         android:keepScreenOn="true"
         android:background="@android:color/white"
         android:gravity="center"
-        android:src="@drawable/tenaris_full_logo" >
-        </ImageView>
+        android:src="@drawable/tenaris_full_logo">
+    </ImageView>
 </FrameLayout>
